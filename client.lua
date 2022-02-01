@@ -36,12 +36,12 @@ function Update(combo)
 end
 
 function InputCheck()
-    local leftKeyPressed = IsControlPressed( 0, 174) or 0 -- Left
-    local rightKeyPressed = IsControlPressed( 0, 175) or 0 -- Right
+    local leftKeyPressed = IsControlPressed( 0, 0xA65EBAB4) or 0 -- Left
+    local rightKeyPressed = IsControlPressed( 0, 0xDEB34313) or 0 -- Right
     if IsControlPressed( 0, 322) then -- Esc
         EndMinigame(false)
     end
-    if IsControlPressed( 0, 20) then -- Z
+    if IsControlPressed( 0, 0x26E9DC00) then -- Z
         rotSpeed = 0.1
         modifier = 33
     elseif IsControlPressed( 0, 21) then -- Left Shift
