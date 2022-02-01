@@ -1,4 +1,4 @@
-local QBCore = exports['qbr-core']:GetCoreObject()
+local QBCore = exports['qb-core']:GetCoreObject()
 
 function StartMinigame(combo)
 	local Coords = GetEntityCoords(PlayerPedId(), false)
