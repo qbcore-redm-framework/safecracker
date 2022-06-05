@@ -1,5 +1,3 @@
-local QBCore = exports['qbr-core']:GetCoreObject()
-
 function StartMinigame(combo)
 	local Coords = GetEntityCoords(PlayerPedId(), false)
 	local Object = GetClosestObjectOfType(Coords.x, Coords.y, Coords.z, 5.0, `v_ilev_gangsafedoor`, false, false, false)
@@ -138,9 +136,9 @@ function EndMinigame(won)
 	SafeCracker.MinigameOpen = false
 	if won then 
 		PlaySoundFrontend(SafeCracker.SoundID, SafeCracker.Config.SafeFinalSound, SafeCracker.Config.SafeSoundset, true)
-		QBCore.Functions.Notify("Safe opened..", "success")
+		exports['qbr-core']:Notify("Safe opened..", "success")
 	else
-		QBCore.Functions.Notify("Safe opening failed..", "error")
+		exports['qbr-core']:Notify("Safe opening failed..", "error")
 	end
   	TriggerEvent('SafeCracker:EndMinigame', won)
 	FreezeEntityPosition(PlayerPedId(), false)
